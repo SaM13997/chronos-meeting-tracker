@@ -7,7 +7,7 @@ import {
 	isRouteErrorResponse,
 	useRouteError,
 } from "@remix-run/react";
-
+import "@fontsource/poppins";
 import { GlobalPendingIndicator } from "@/components/global-pending-indicator";
 import { Header } from "@/components/header";
 import {
@@ -27,7 +27,7 @@ function App({ children }: { children: React.ReactNode }) {
 				<Links />
 				<ThemeSwitcherScript />
 			</head>
-			<body>
+			<body className="flex flex-col h-dvh p-4 pt-0">
 				<GlobalPendingIndicator />
 				<Header />
 				{children}
