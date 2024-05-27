@@ -22,6 +22,7 @@ module.exports = {
 				border: lightDarkVar("border"),
 				input: lightDarkVar("input"),
 				ring: lightDarkVar("ring"),
+        completed: '#FCD36A',
 				background: lightDarkVar("background"),
 				foreground: lightDarkVar("foreground"),
 				primary: {

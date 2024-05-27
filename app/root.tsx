@@ -27,7 +27,7 @@ function App({ children }: { children: React.ReactNode }) {
 				<Links />
 				<ThemeSwitcherScript />
 			</head>
-			<body className="flex flex-col h-dvh p-4 pt-0">
+			<body className="flex flex-col h-dvh pt-0">
 				<GlobalPendingIndicator />
 				<Header />
 				{children}
