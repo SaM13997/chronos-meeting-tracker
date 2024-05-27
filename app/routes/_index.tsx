@@ -12,6 +12,28 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const items = [
+			{
+				timing: "1:00-1:30 PM",
+				title: "Discuss the project requirements and plan the tasks",
+				desc: "Repeats every two weeks",
+			},
+			{
+				timing: "1:30-2:00 PM",
+				title: "Review the code",
+				desc: "Repeats every two weeks",
+			},
+			{
+				timing: "2:00-2:30 PM",
+				title: "Plan the next steps",
+				desc: "Repeats every three weeks",
+			},
+      {
+        timing: "2:30-3:00 PM",
+        title: "Sprint Retrospective",
+        desc: "Repeats every four weeks",
+      }
+		];
 	return (
 		<div className="h-full flex flex-col overflow-y-hidden">
 			<IphoneFrame className="hidden min-[500px]:block">
@@ -37,9 +59,11 @@ export default function Index() {
 				</div>
 				<div className="flex bg flex-col w-full gap-1 px-4 overflow-y-auto pb-4">
 					<CardCompleted />
-					<CardOngoing />
-					<CardOngoing />
-					<CardOngoing />
+          {
+            items.map((item, i) => (
+              <CardOngoing key={i} timing={item.timing} title={item.title} desc={item.desc} />
+            ))
+          }
 				</div>
 			</div>
 		</div>

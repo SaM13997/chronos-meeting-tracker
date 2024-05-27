@@ -51,7 +51,7 @@ export function ThemeSwitcherScript() {
 
 export function getTheme() {
 	return validateTheme(
-		typeof document === "undefined" ? "system" : localStorage.getItem("theme"),
+		typeof document === "undefined" ? "dark" : localStorage.getItem("theme"),
 	);
 }
 
